@@ -1,45 +1,73 @@
 """
 Problem link: https://codingcompetitions.withgoogle.com/kickstart/round/0000000000434c0e/0000000000434ba7
 """
-
 T = int(input())
 
 for test_case in range(T):
 
     N = int(input())
-    skater_name = [input().lower() for card_num in range(N)]
+    skater_name = [input() for card_num in range(N)]
 
     alpha_num = {
-        "a": 1,
-        "b": 2,
-        "c": 3,
-        "d": 4,
-        "e": 5,
-        "f": 6,
-        "g": 7,
-        "h": 8,
-        "i": 9,
-        "j": 10,
-        "k": 11,
-        "l": 12,
-        "m": 13,
-        "n": 14,
-        "o": 15,
-        "p": 16,
-        "q": 17,
-        "r": 18,
-        "s": 19,
-        "t": 20,
-        "u": 21,
-        "v": 22,
-        "w": 23,
-        "x": 24,
-        "y": 25,
-        "z": 26,
-        " ": 0,
+        " ": 1,
+
+        "A": 2,
+        "B": 3,
+        "C": 4,
+        "D": 5,
+        "E": 6,
+        "F": 7,
+        "G": 8,
+        "H": 9,
+        "I": 10,
+        "J": 11,
+        "K": 12,
+        "L": 13,
+        "M": 14,
+        "N": 15,
+        "O": 16,
+        "P": 17,
+        "Q": 18,
+        "R": 19,
+        "S": 20,
+        "T": 21,
+        "U": 22,
+        "V": 23,
+        "W": 24,
+        "X": 25,
+        "Y": 26,
+        "Z": 27,
+
+        "a": 28,
+        "b": 29,
+        "c": 30,
+        "d": 31,
+        "e": 32,
+        "f": 33,
+        "g": 34,
+        "h": 35,
+        "i": 36,
+        "j": 37,
+        "k": 38,
+        "l": 39,
+        "m": 40,
+        "n": 41,
+        "o": 42,
+        "p": 43,
+        "q": 44,
+        "r": 45,
+        "s": 46,
+        "t": 47,
+        "u": 48,
+        "v": 49,
+        "w": 50,
+        "x": 51,
+        "y": 52,
+        "z": 53
     }
 
     name_value_pairs = {}
+
     for name in skater_name:
         value = ""
         for alph in name:
@@ -52,10 +80,6 @@ for test_case in range(T):
     }
 
     sorted_list = [name for name in sorted_dict.values()]
-    print(sorted_list)
-    print(sorted_dict)
-    print(skater_name)
-
     changes = 0
 
     for index in range(len(sorted_list)):
